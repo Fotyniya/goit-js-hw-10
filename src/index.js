@@ -22,7 +22,7 @@ function onSearchCountries (name) {
         })
         .then((data) => {
             if (data.length == 1) {
-                console.log(data)
+                
                 let markupLang = '';
                 const markup = data.map (data => {
                     let lang =[]
@@ -34,12 +34,12 @@ function onSearchCountries (name) {
                 <p><span class = 'bold'>Capital:</span> ${data.capital}</p>
                 <p><span class = 'bold'>Population:</span> ${data.population}</p>
                 ${markupLang}`}).join();
-                console.log(markup)
+                
                 oneCountryFound.insertAdjacentHTML('afterbegin', markup)
                 
             } else if (data.length >= 2 & data.length <= 10){
                 const markup = data.map(data => {return `<h2 class = 'title'><img src="${data.flags.svg}" alt="flag" width = '30'>  ${data.name}</h2>`}).join('');
-                console.log(markup)
+               
                 countryList.insertAdjacentHTML('afterbegin', markup)
             } 
             else if(data.length > 10){
