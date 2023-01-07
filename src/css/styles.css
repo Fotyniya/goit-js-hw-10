@@ -18,3 +18,12 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+p {
+  font-size: 24px;
+}
+.bold {
+  font-weight: bold;
+}
+.title {
+  font-size: 30px;
+}
